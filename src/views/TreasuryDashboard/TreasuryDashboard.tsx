@@ -2,7 +2,7 @@ import { memo } from "react";
 import "./treasury-dashboard.scss";
 import { Paper, Grid, Box, Zoom, Container, useMediaQuery, Typography, SvgIcon } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
-import { MarketCap, OHMPrice, GOHMPrice, CircSupply, BackingPerOHM, CurrentIndex } from "./components/Metric/Metric";
+import { MarketCap, BOSSPrice, CircSupply, BackingPerBOSS, CurrentIndex } from "./components/Metric/Metric";
 import { ReactComponent as InfoIcon } from "../../assets/icons/info-fill.svg";
 
 import {
@@ -30,15 +30,14 @@ const TreasuryDashboard = memo(() => {
           <Paper className="ohm-card">
             <MetricCollection>
               <MarketCap />
-              <OHMPrice />
-              <GOHMPrice />
+              <BOSSPrice />
               <CircSupply />
-              <BackingPerOHM />
+              <BackingPerBOSS />
               <CurrentIndex />
             </MetricCollection>
           </Paper>
         </Box>
-        <Box className="hero-metrics" style={{ marginTop: "20px" }}>
+        {/* <Box className="hero-metrics" style={{ marginTop: "20px" }}>
           <Alert
             variant="filled"
             icon={false}
@@ -55,11 +54,12 @@ const TreasuryDashboard = memo(() => {
               </Typography>
             </Box>
           </Alert>
-        </Box>
+        </Box> */}
 
         <Zoom in={true}>
           <Grid container spacing={2} className="data-grid">
-            <Grid item lg={6} md={6} sm={12} xs={12}>
+            
+            {/* <Grid item lg={6} md={6} sm={12} xs={12}>
               <Paper className="ohm-card ohm-chart-card">
                 <TotalValueDepositedGraph />
               </Paper>
@@ -81,7 +81,7 @@ const TreasuryDashboard = memo(() => {
               <Paper className="ohm-card ohm-chart-card">
                 <ProtocolOwnedLiquidityGraph />
               </Paper>
-            </Grid>
+            </Grid> */}
 
             {/*  Temporarily removed until correct data is in the graph */}
             {/* <Grid item lg={6} md={12} sm={12} xs={12}>
@@ -108,7 +108,7 @@ const TreasuryDashboard = memo(() => {
               </Paper>
             </Grid> */}
 
-            <Grid item lg={6} md={6} sm={12} xs={12}>
+            {/* <Grid item lg={6} md={6} sm={12} xs={12}>
               <Paper className="ohm-card ohm-chart-card">
                 <OHMStakedGraph />
               </Paper>
@@ -118,7 +118,7 @@ const TreasuryDashboard = memo(() => {
               <Paper className="ohm-card ohm-chart-card">
                 <RunwayAvailableGraph />
               </Paper>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Zoom>
       </Container>

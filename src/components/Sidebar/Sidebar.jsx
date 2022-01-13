@@ -1,4 +1,4 @@
-import { Drawer } from "@material-ui/core";
+  import { Drawer } from "@material-ui/core";
 import NavContent from "./NavContent.jsx";
 import "./sidebar.scss";
 

@@ -262,26 +262,12 @@ function Wrap() {
               <Grid item>
                 <div className="card-header">
                   <Typography variant="h5">Wrap / Unwrap</Typography>
-                  <Link
-                    className="migrate-sohm-button"
-                    style={{ textDecoration: "none" }}
-                    href={
-                      assetTo === "wsOHM"
-                        ? "https://docs.olympusdao.finance/main/contracts/tokens#wsohm"
-                        : "https://docs.olympusdao.finance/main/contracts/tokens#gohm"
-                    }
-                    aria-label="wsohm-wut"
-                    target="_blank"
-                  >
-                    <Typography>gOHM</Typography>{" "}
-                    <SvgIcon component={ArrowUp} color="primary" style={{ marginLeft: "5px", width: ".8em" }} />
-                  </Link>
                 </div>
               </Grid>
               <Grid item>
                 <MetricCollection>
                   <Metric
-                    label={`sOHM ${t`Price`}`}
+                    label={`sBOSS ${t`Price`}`}
                     metric={formatCurrency(sOhmPrice, 2)}
                     isLoading={sOhmPrice ? false : true}
                   />
@@ -289,12 +275,6 @@ function Wrap() {
                     label={t`Current Index`}
                     metric={trim(currentIndex, 1)}
                     isLoading={currentIndex ? false : true}
-                  />
-                  <Metric
-                    label={`gOHM ${t`Price`}`}
-                    metric={formatCurrency(gOhmPrice, 2)}
-                    isLoading={gOhmPrice ? false : true}
-                    tooltip={`gOHM = sOHM * index\n\nThe price of gOHM is equal to the price of sOHM multiplied by the current index`}
                   />
                 </MetricCollection>
               </Grid>

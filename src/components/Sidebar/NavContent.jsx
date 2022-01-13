@@ -5,7 +5,7 @@ import externalUrls from "./externalUrls";
 import { ReactComponent as StakeIcon } from "../../assets/icons/stake.svg";
 import { ReactComponent as BondIcon } from "../../assets/icons/bond.svg";
 import { ReactComponent as DashboardIcon } from "../../assets/icons/dashboard.svg";
-import { ReactComponent as OlympusIcon } from "../../assets/icons/olympus-nav-header.svg";
+import FedoraIcon  from "../../assets/icons/fedora-icon-18.jpg";
 import { ReactComponent as PoolTogetherIcon } from "../../assets/icons/33-together.svg";
 import { ReactComponent as GiveIcon } from "../../assets/icons/give.svg";
 import { ReactComponent as ZapIcon } from "../../assets/icons/zap.svg";
@@ -13,7 +13,6 @@ import { ReactComponent as NewIcon } from "../../assets/icons/new-icon.svg";
 import { ReactComponent as WrapIcon } from "../../assets/icons/wrap.svg";
 import { ReactComponent as BridgeIcon } from "../../assets/icons/bridge.svg";
 import { ReactComponent as ArrowUpIcon } from "../../assets/icons/arrow-up.svg";
-import { ReactComponent as ProIcon } from "../../assets/Olympus Logo.svg";
 import { Trans } from "@lingui/macro";
 import { trim } from "../../helpers";
 import { useWeb3Context } from "src/hooks/web3Context";
@@ -108,13 +107,10 @@ function NavContent({ handleDrawerToggle }) {
       <Box className="dapp-sidebar-inner" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="https://olympusdao.finance" target="_blank">
-              <SvgIcon
-                color="primary"
-                component={OlympusIcon}
-                viewBox="0 0 151 100"
-                style={{ minWdth: "151px", minHeight: "98px", width: "151px" }}
-              />
+            <Link href="https://nostra.dao" target="_blank">
+              <img src={FedoraIcon} alt="Fedora" style={{ minWdth: "151px", minHeight: "98px", width: "151px" }} />
+            <h2>Nostra DAO</h2>      
+            
             </Link>
 
             <WalletAddressEns />
@@ -305,7 +301,7 @@ function NavContent({ handleDrawerToggle }) {
                     </Box>
                   </Link>
 
-                  <Link
+                  {/* <Link
                     href={"https://synapseprotocol.com/?inputCurrency=gOHM&outputCurrency=gOHM&outputChain=43114"}
                     target="_blank"
                     className="external-site-link"
@@ -320,24 +316,11 @@ function NavContent({ handleDrawerToggle }) {
                         className="external-site-link-icon"
                       />
                     </Typography>
-                  </Link>
+                  </Link> */}
 
                   <Box className="menu-divider">
-                    <Divider />
                   </Box>
 
-                  <Link
-                    href="https://pro.olympusdao.finance/"
-                    target="_blank"
-                    className="external-site-link"
-                    onClick={handleDrawerToggle}
-                  >
-                    <Box display="flex" alignItems="center">
-                      <SvgIcon component={ProIcon} color="primary" color="primary" viewBox="0 0 50 50" />
-                      <Typography variant="h6">Olympus Pro</Typography>
-                      <SvgIcon component={ArrowUpIcon} className="external-site-link-icon" />
-                    </Box>
-                  </Link>
 
                   {/* <Link
                     component={NavLink}
