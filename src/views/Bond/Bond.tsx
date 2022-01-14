@@ -81,7 +81,7 @@ const Bond = ({ bond }: { bond: IAllBondData }) => {
                   <Typography variant="h3" className="price" color="primary">
                     <>{isBondLoading ? <Skeleton width="50px" /> : <DisplayBondPrice key={bond.name} bond={bond} />}</>
                   </Typography>
-                </div>
+                </div>  
                 <div className="bond-price-data">
                   <Typography variant="h5" color="textSecondary">
                     <Trans>Market Price</Trans>
